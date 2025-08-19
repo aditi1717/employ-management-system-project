@@ -4,7 +4,7 @@ export default function TaskList() {
 	return (
 		<div
 			id="tasklist"
-			className="overflow-x-auto mt-10 h-[55%] py-5 w-full  flex items-center justify-start gap-5 flex-nowrap"
+			className="text-white overflow-x-auto mt-10 h-[55%] py-5 w-full  flex items-center justify-start gap-5 flex-nowrap"
 		>
 			<div className="flex-shrink-0 h-full w-[300px] rounded-xl bg-red-400 p-5">
 				<div className="flex justify-between items-center">
