@@ -1,13 +1,12 @@
 import { useState } from "react";
 
-export default function Login() {
+export default function Login({ handleLogin }) {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
 	const submitHandler = (e) => {
 		e.preventDefault();
-		console.log("Email is ", email);
-		console.log("Password is ", password);
+		handleLogin(email, password);
 
 		setEmail("");
 		setPassword("");
@@ -22,7 +21,7 @@ export default function Login() {
 					className="  flex flex-col justify-center items-center"
 				>
 					<input
-						className=" placeholder:text-gray-400 outline-none border-2 border-emerald-600 py-3 px-5 text-xl rounded-full"
+						className="bg-transparent text-white placeholder:text-gray-400 outline-none border-2 border-emerald-600 py-3 px-5 text-xl rounded-full"
 						type="email"
 						placeholder="Enter your email"
 						value={email}
@@ -32,7 +31,7 @@ export default function Login() {
 						}}
 					/>
 					<input
-						className="mt-3  placeholder:text-gray-400 outline-none border-2 border-emerald-600 py-3 px-5 text-xl rounded-full"
+						className="bg-transparent text-white mt-3  placeholder:text-gray-400 outline-none border-2 border-emerald-600 py-3 px-5 text-xl rounded-full"
 						type="password"
 						placeholder="Enter your password"
 						value={password}
